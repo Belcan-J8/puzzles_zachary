@@ -1,0 +1,6 @@
+.vscode
+cmake_*
+CMakeCache.txt
+Makefile
+puzzle
+CMakeFiles

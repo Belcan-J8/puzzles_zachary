@@ -7,7 +7,7 @@ int main(int argc, char* argv[])
 
 	logger.Log("Starting application");
 
-	Car car;
+	Car car(&logger);
 	car.TurnLeft();
 	car.TurnRight();
 	car.Accelerate();
