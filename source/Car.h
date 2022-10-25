@@ -8,7 +8,7 @@ class ILogger;
 class Car
 {
 public:
-	Car(ILogger* logger);
+	Car();
 	void TurnLeft();
 	void TurnRight();
 	void Accelerate();

@@ -1,13 +1,12 @@
 #include "FuelGauge.h"
 
 #include "Logger.h"
-#include "termcolor.hpp"
+#include "../lib/termcolor.hpp"
 
 #include <iostream>
 
-FuelGauge::FuelGauge(ILogger* logger)
-	: fuelLevel(5)
-	, logger(logger)
+FuelGauge::FuelGauge()
+	: fuelLevel(5), logger(new RedLogger())
 {
 }
 

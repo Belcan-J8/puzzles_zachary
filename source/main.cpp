@@ -1,14 +1,12 @@
 #include "Car.h"
 #include "Logger.h"
-#include "termcolor.hpp"
+#include "../lib/termcolor.hpp"
 
 int main(int argc, char* argv[])
 {
 	Logger logger;
-
 	logger.Log("Starting application");
-
-	Car car(&logger);
+	Car car;
 	car.TurnLeft();
 	car.TurnRight();
 	car.Accelerate();
