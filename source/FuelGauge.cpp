@@ -18,6 +18,5 @@ void FuelGauge::DecrementFuelLevel()
 	{
 		std::cout << termcolor::red;
 		logger->Log("Low fuel!");
-		std::cout << termcolor::white;
 	}
 }
