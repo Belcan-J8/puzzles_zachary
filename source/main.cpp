@@ -1,5 +1,6 @@
 #include "Car.h"
 #include "Logger.h"
+#include "termcolor.hpp"
 
 int main(int argc, char* argv[])
 {
@@ -7,10 +8,10 @@ int main(int argc, char* argv[])
 
 	logger.Log("Starting application");
 
-	Car car;
+	Car car(&logger);
 	car.TurnLeft();
 	car.TurnRight();
 	car.Accelerate();
-
+	std::cout << termcolor::reset;
 	logger.Log("Exiting application");
 }
