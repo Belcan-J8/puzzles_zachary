@@ -10,6 +10,5 @@ int main(int argc, char* argv[])
 	car.TurnLeft();
 	car.TurnRight();
 	car.Accelerate();
-	std::cout << termcolor::reset;
 	logger.Log("Exiting application");
 }

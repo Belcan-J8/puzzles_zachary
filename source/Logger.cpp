@@ -5,6 +5,7 @@
 
 void Logger::Log(const std::string& string)
 {
+	std::cout << termcolor::reset << string << std::endl;
 	std::cout << string << std::endl;
 }
 
