@@ -1,9 +1,12 @@
 #include "Car.h"
 
-Car::Car()
-	: logger(new Logger())
+#include "Logger.h"
+
+Car::Car(ILogger* logger)
+	: logger(logger), fuelGauge(FuelGauge(logger))
 {
 }
+
 void Car::TurnLeft()
 {
 	logger->Log("Turning left");

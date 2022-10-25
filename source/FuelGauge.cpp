@@ -1,10 +1,13 @@
 #include "FuelGauge.h"
 
-FuelGauge::FuelGauge()
+#include "Logger.h"
+
+FuelGauge::FuelGauge(ILogger* logger)
 	: fuelLevel(5)
-	, logger(new Logger())
+	, logger(logger)
 {
 }
+
 void FuelGauge::DecrementFuelLevel()
 {
 	--fuelLevel;

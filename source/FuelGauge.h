@@ -1,11 +1,12 @@
 #pragma once
 
-#include "Logger.h"
+// Forward declarations
+class ILogger;
 
 class FuelGauge
 {
 public:
-	FuelGauge();
+	FuelGauge(ILogger* logger);
 	void DecrementFuelLevel();
 private:
 	int fuelLevel;
