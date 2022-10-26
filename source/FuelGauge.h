@@ -1,6 +1,7 @@
 #pragma once
 
-#include "Logger.h"
+// Forward declarations
+class ILogger;
 
 class FuelGauge
 {

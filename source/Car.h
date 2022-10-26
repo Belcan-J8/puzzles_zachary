@@ -1,7 +1,9 @@
 #pragma once
 
 #include "FuelGauge.h"
-#include "Logger.h"
+
+// Forward declarations
+class ILogger;
 
 class Car
 {
@@ -10,6 +12,7 @@ public:
 	void TurnLeft();
 	void TurnRight();
 	void Accelerate();
+	
 private:
 	FuelGauge fuelGauge;
 	ILogger* logger;
