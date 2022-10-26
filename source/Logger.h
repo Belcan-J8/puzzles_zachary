@@ -10,18 +10,18 @@ struct ILogger
 class Logger : public ILogger
 {
 public:
-	void Log(const std::string& string);
+	void Log(const std::string& string) override;
 };
 
 class BlueLogger : public ILogger
 {
 public:
-	void Log(const std::string& string);
+	void Log(const std::string& string) override;
 };
 
 class RedLogger : public ILogger
 {
 public:
-	void Log(const std::string& string);
+	void Log(const std::string& string) override;
 };
 

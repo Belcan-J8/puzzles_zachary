@@ -15,7 +15,6 @@ void FuelGauge::DecrementFuelLevel()
 	--fuelLevel;
 	if (fuelLevel < 2)
 	{
-		std::cout << termcolor::red;
 		logger->Log("Low fuel!");
 	}
 }
