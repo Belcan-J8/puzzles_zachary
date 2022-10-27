@@ -5,8 +5,9 @@
 
 #include <iostream>
 
-Car::Car()
-	: logger(new BlueLogger())
+Car::Car(Color logColor)
+	: logger(new Logger(logColor)),
+	fuelGauge(FuelGauge(Color::YELLOW))
 {
 }
 

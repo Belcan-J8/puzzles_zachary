@@ -3,17 +3,43 @@
 #include "../lib/termcolor.hpp"
 #include <iostream>
 
+Logger::Logger(Color logColor) :
+	logColor(logColor)
+{
+	
+}
+
 void Logger::Log(const std::string& string)
 {
-	std::cout << termcolor::reset << string << std::endl;
-}
+	switch (logColor)
+	{
+		case (Color::RESET):
+		{
+			std::cout << termcolor::reset;
+			break;
+		}
 
-void BlueLogger::Log(const std::string& string)
-{
-	std::cout << termcolor::blue << string << std::endl;
-}
+		case (Color::YELLOW):
+		{
+			std::cout << termcolor::yellow;
+			break;
+		}
 
-void RedLogger::Log(const std::string& string)
-{
-	std::cout << termcolor::red << string << std::endl;
+		case (Color::CYAN):
+		{
+			std::cout << termcolor::cyan;
+			break;
+		}
+
+		case (Color::MAGENTA):
+		{
+			std::cout << termcolor::magenta;
+			break;
+		}
+
+		default:
+			break;
+	}
+
+	std::cout << string << std::endl;
 }

@@ -2,6 +2,14 @@
 
 #include <string>
 
+enum class Color
+{
+	RESET,
+	YELLOW,
+	CYAN,
+	MAGENTA
+};
+
 struct ILogger
 {
 	virtual void Log(const std::string& string) = 0;
@@ -10,18 +18,10 @@ struct ILogger
 class Logger : public ILogger
 {
 public:
+	Logger(Color logColor);
 	void Log(const std::string& string) override;
-};
 
-class BlueLogger : public ILogger
-{
-public:
-	void Log(const std::string& string) override;
-};
-
-class RedLogger : public ILogger
-{
-public:
-	void Log(const std::string& string) override;
+private:
+	Color logColor;
 };
 

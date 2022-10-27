@@ -5,8 +5,8 @@
 
 #include <iostream>
 
-FuelGauge::FuelGauge()
-	: fuelLevel(5), logger(new RedLogger())
+FuelGauge::FuelGauge(Color logColor)
+	: fuelLevel(5), logger(new Logger(logColor))
 {
 }
 
