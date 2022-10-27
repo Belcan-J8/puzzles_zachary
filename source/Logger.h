@@ -2,13 +2,26 @@
 
 #include <string>
 
+enum class Color
+{
+	RESET,
+	YELLOW,
+	CYAN,
+	MAGENTA
+};
+
 struct ILogger
 {
-	virtual void Log(std::string string) = 0;
+	virtual void Log(const std::string& string) = 0;
 };
 
 class Logger : public ILogger
 {
 public:
-	void Log(std::string string);
+	Logger(Color logColor);
+	void Log(const std::string& string) override;
+
+private:
+	Color logColor;
 };
+
